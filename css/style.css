@@ -1,0 +1,111 @@
+/* Fontes serifadas clássicas, elegantes e otimizadas para leitura clara em telas */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo suave em tom pergaminho/sépia claro */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e8dfc8;
+    background-image: radial-gradient(circle at center, #f0e7d0 0%, #dfd4b8 100%);
+    padding: 24px;
+}
+
+/* Cartão estilo página de livro */
+main {
+    background-color: #f7f2e4;
+    padding: 50px 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(45, 30, 15, 0.12),
+                0 2px 8px rgba(45, 30, 15, 0.08);
+    border: 1px solid #d8cbab;
+    max-width: 580px; /* Aumentado ligeiramente para acomodar o texto maior com conforto */
+    width: 100%;
+    text-align: center;
+}
+
+/* Título em fonte clássica romana/epigráfica (nítida e legível) */
+h1 {
+    font-family: 'Cinzel', serif;
+    color: #2c1d11; /* Marrom-escuro de altíssimo contraste */
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Quadro da frase com alto contraste e espaço */
+div {
+    background-color: #ffffff; /* Fundo branco quente para máximo contraste */
+    border: 2px solid #a89371; /* Borda visível e bem definida */
+    padding: 36px 32px;
+    border-radius: 6px;
+    margin-bottom: 35px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+/* Texto da frase grande, legível e confortável */
+div p {
+    font-family: 'Merriweather', Georgia, serif;
+    color: #1a1008; /* Tom marrom quase preto para legibilidade total */
+    font-size: 1.35rem; /* Tamanho ampliado */
+    line-height: 1.8; /* Espaçamento entre linhas confortável */
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Botão clássico com letras bem definidas e grande área de clique */
+button {
+    font-family: 'Cinzel', serif;
+    background-color: #4a3422;
+    color: #ffffff;
+    border: none;
+    padding: 16px 36px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
+}
+
+/* Interações acessíveis (Hover e Foco) */
+button:hover {
+    background-color: #2c1d11;
+    box-shadow: 0 4px 14px rgba(44, 29, 17, 0.3);
+}
+
+button:focus-visible {
+    outline: 3px solid #8c6747;
+    outline-offset: 3px;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Animação para troca suave da frase */
+#texto-frase {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estado invisível durante a troca */
+#texto-frase.escondido {
+    opacity: 0;
+    transform: translateY(-8px);
+}
